@@ -142,7 +142,31 @@ Ahora ese segundo dispositivo también envía su propio mensaje FIN para cerrar 
 ACK:
 Finalmente, el primero responde con un ACK y la conexión se cierra por completo.
 
-14.
+14.Multiplexación descendente es el proceso por el cual la capa de transporte, como TCP, recibe datos de varias aplicaciones que se están ejecutando al mismo tiempo en un dispositivo y los organiza para enviarlos a través de la red. Por ejemplo, si tienes abierto un navegador web, un programa de correo y una videollamada, todos están enviando datos a la red. TCP utiliza números de puerto para distinguir de qué aplicación viene cada flujo de datos. 
+Multiplexación ascendente es el proceso contrario. Es cuando los datos llegan desde la red hacia un dispositivo y TCP los separa correctamente para entregarlos a la aplicación correcta. Lo hace mirando los números de puerto de destino incluidos en los segmentos TCP.
+
+15. a) Conversión de unidades
+
+Primero pasamos las unidades a formas compatibles:
+
+RTT = 50 ms = 0.05 segundos
+
+Ancho de banda = 100 Mbps = 100,000,000 bits por segundo
+
+MSS = 1500 bytes = 1500 × 8 = 12,000 bits
+
+b) Cálculo del tamaño óptimo de ventana
+
+La fórmula es:
+Ventana óptima = Ancho de banda × RTT
+
+Sustituimos:
+Ventana óptima = 100,000,000 × 0.05 = 5,000,000 bits
+
+Para pasarlo a bytes:
+5,000,000 ÷ 8 = 625,000 bytes
+
+16.
 
  
    
