@@ -84,7 +84,41 @@ Primera dirección válida (host): 172.22.52.1
 Dirección de broadcast: 172.22.55.255
  Rango válido: 172.22.52.1 a 172.22.55.254
 
- 11.
+ 11.a) 32 -26 = 6 bits paara host
+ 2^6 = 64 direcciones por subred
+ Dirección de subred: 172.30.67.192
+ Dirección de broadcast:
+ Sumamos 64 direcciones: 192 + 64 = 256, la dirección de broadcast es 172.30.67.255 porque el maximo es 255
+ entonces la ultima direccion valida es 172.30.67.254
+
+ b)Convertimos la máscara:
+255.255.255.192 en binario: 11111111.11111111.11111111.11000000
+ Eso indica una /26, 6 bits para hosts.
+ 2^6 = 64
+ 2 se reservan
+ 64 - 2 = 62
+
+ 12.a) Una máscara /23 significa que hay 23 bits para la red y 9 bits para los hosts (32 – 23 = 9). Eso implica que cada bloque tiene 2^9 = 512 direcciones.
+ Ahora buscamos a qué subred pertenece 172.18.171.190.
+Sabemos que la red es clase B (los dos primeros octetos: 172.18), así que trabajamos con el tercer y cuarto octeto.
+En binario:
+171 = 10101011
+Como estamos en /23, solo se usan 7 bits del tercer octeto (8 del tercero y 1 del cuarto).
+las subredes se crean de 2 en 2 a partir del tercer octeto.
+El valor más bajo múltiplo de 2 menor o igual que 171 es 170
+Por tanto:
+Dirección de subred: 172.18.170.0
+Dirección de broadcast: 172.18.171.255
+Rango de hosts: desde 172.18.170.1 hasta 172.18.171.254
+
+b)Número de subredes = 2^s, donde s es el número de bits prestados para subredes.
+2^2 = 4 subredes
+hay que dar 2
+la nueva mascara seria /24 + 2 = 26
+
+13.
+
+ 
    
    
    
