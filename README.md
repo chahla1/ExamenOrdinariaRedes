@@ -15,6 +15,15 @@ Cuando un usuario escribe una URL en su navegador, su ordenador necesita conocer
 El navegador pregunta al sistema operativo si ya conoce la IP asociada al nombre ingresado, si no la encuentra, se hace una solicitud a un servidor DNS local, proporcionado por el proveedor de Internet. Si el servidor local no tiene la dirección en su caché, la consulta se envía a un servidor raíz DNS, que responde indicando qué servidor es responsable del dominio de nivel superior. Luego, el proceso sigue con consultas a los servidores autoritativos, que conocen la dirección exacta del dominio solicitado.
 Una vez obtenida la dirección IP, esta se envía al navegador, que finalmente establece la conexión con el servidor web correspondiente y carga la página.
 
-4.Se comienza en la capa de aplicación, que es donde se encuentran los programas que usan los usuarios. Esta capa genera los datos que se quieren enviar y utiliza protocolos como HTTP, SMTP o DNS para darles un formato entendible. Una vez que los datos están listos, pasan a la capa de transporte, que se encarga de dividirlos en segmentos y garantizar que lleguen de manera ordenada y sin errores. Después, los datos llegan a la capa de Internet, donde se encapsulan en paquetes IP. Aquí se añaden las direcciones IP de origen y destino para que cada paquete sepa a dónde ir. Por último, la capa de acceso a red toma los paquetes IP y los convierte en tramas adecuadas para la red física, como Ethernet o Wi-Fi.
+4. Se comienza en la capa de aplicación, que es donde se encuentran los programas que usan los usuarios. Esta capa genera los datos que se quieren enviar y utiliza protocolos como HTTP, SMTP o DNS para darles un formato entendible. Una vez que los datos están listos, pasan a la capa de transporte, que se encarga de dividirlos en segmentos y garantizar que lleguen de manera ordenada y sin errores. Después, los datos llegan a la capa de Internet, donde se encapsulan en paquetes IP. Aquí se añaden las direcciones IP de origen y destino para que cada paquete sepa a dónde ir. Por último, la capa de acceso a red toma los paquetes IP y los convierte en tramas adecuadas para la red física, como Ethernet o Wi-Fi.
+
+5.  𝐶 = 𝐵 × log ⁡ 2 ( 1 + SNR )
+   SNR = 10^20/10 = 100
+   B = 500 * 10^6 = 500000000
+   Ahora aplicamos la formula:
+   C = 500000000 * log(1 + 100) = 500000000 * 6.6582 = 3.33 gbps
+
+6. 
+   
  
 
