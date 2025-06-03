@@ -54,7 +54,37 @@ distancia total desde el origen hasta cada nodo vecino del actual; si esa nueva 
 b) A diferencia del enrutamiento por inundación, el algoritmo de Dijkstra encuentra la ruta mas corta y eficiente, evita el trafico innecesario, usa tablas de enrutamiento, y, aunque es mas lento de calcular, es muy eficiente una vez establecido.
 Por otro lado, el Flooding envia el paquete por todos los caminos posibles, no necesita conocer la topologia de la red, garantiza que el mensaje llegue pero genera mucho trafico y puede causar tormentas de paquetes si no se controla.
 
-10.
+10.a) IP: 172.29.152.0
+ en binario: 10101100.00011101.10011000.00000000
+
+Máscara: 255.255.248.0
+ en binario: 11111111.11111111.11111000.00000000
+ eso nos indica que los primeros 21 bits son de red y los últimos 11 bits son de host.
+ Bits de red (primeros 21): 10101100.00011101.100
+
+Bits de host (últimos 11): 11111111111
+
+Juntando todo:
+ 10101100.00011101.10011111.11111111
+ En decimal: 172.29.159.255
+
+ b)Máscara 255.255.252.0 → en binario: 11111111.11111111.11111100.00000000
+ Son 22 bits de red (porque 252 en binario es 11111100).
+ 52 es el múltiplo más cercano a 53 
+ Entonces, el bloque de subred empieza en:
+ 172.22.52.0
+ Con una máscara /22, los bits de host son 10 (porque 32 – 22 = 10), lo que da 2¹⁰ = 1024 direcciones por subred.
+
+Entonces, el rango de direcciones va de:
+
+Primera dirección válida (host): 172.22.52.1
+
+Última dirección válida (host): 172.22.55.254
+
+Dirección de broadcast: 172.22.55.255
+ Rango válido: 172.22.52.1 a 172.22.55.254
+
+ 11.
    
    
    
