@@ -8,5 +8,13 @@ El modelo OSI es muy util como herramienta educativa y de diseño, ya que propor
 2. La capa de transporte, tanto en el modelo OSI como en el modelo TCP/IP, se encarga de ofrecer una comunicación confiable de extremo a extremo entre aplicaciones que se ejecutan en dispositivos diferentes. Esta capa actúa como un intermediario entre la capa de red y las aplicaciones, gestionando aspectos como el control de errores, el control de flujo y la segmentación de los datos.
 En el caso de protocolos como TCP, la capa de transporte se encarga de establecer una conexión antes de enviar los datos, asegurando así que la comunicación sea fiable.
 Por otro lado, UDP es un protocolo también ubicado en la capa de transporte, pero funciona de forma muy diferente. No establece una conexión previa ni implementa controles de error ni de orden, lo que lo convierte en un protocolo mucho más ligero y rápido. Sin embargo, al no ofrecer fiabilidad, los datos pueden perderse o llegar desordenados.
+
+3. En las redes TCP/IP, el protocolo tradicionalmente utilizado para la transferencia de archivos es FTP (File Transfer Protocol). Este protocolo permite enviar y recibir archivos entre un cliente y un servidor a través de una red. Sin embargo, FTP no cifra la información, lo que lo hace vulnerable a ataques como la interceptación de contraseñas. Entre sus mejores alternativas destacan  SFTP (SSH File Transfer Protocol), que cifra tanto los comandos como los datos, ya que trabaja sobre el protocolo SSH, y FTPS (FTP Secure), que añade soporte para cifrado mediante TLS/SSL, proporcionando autenticación y confidencialidad.
+
+Cuando un usuario escribe una URL en su navegador, su ordenador necesita conocer la dirección IP correspondiente para poder conectarse al servidor web. Aqui utilizamos el Sistema de Nombres de Dominio (DNS), cuya función es traducir nombres de dominio en direcciones IP.
+El navegador pregunta al sistema operativo si ya conoce la IP asociada al nombre ingresado, si no la encuentra, se hace una solicitud a un servidor DNS local, proporcionado por el proveedor de Internet. Si el servidor local no tiene la dirección en su caché, la consulta se envía a un servidor raíz DNS, que responde indicando qué servidor es responsable del dominio de nivel superior. Luego, el proceso sigue con consultas a los servidores autoritativos, que conocen la dirección exacta del dominio solicitado.
+Una vez obtenida la dirección IP, esta se envía al navegador, que finalmente establece la conexión con el servidor web correspondiente y carga la página.
+
+4.
  
 
