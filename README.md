@@ -23,7 +23,11 @@ Una vez obtenida la dirección IP, esta se envía al navegador, que finalmente e
    Ahora aplicamos la formula:
    C = 500000000 * log(1 + 100) = 500000000 * 6.6582 = 3.33 gbps
 
-6. 
+6. a) 1.2 ghz - 0.3 ghz = 0.9ghz
+   b)  1.2 ghz + 0.3 ghz = 1.5ghz
+
+7.
+   
    
  
 
