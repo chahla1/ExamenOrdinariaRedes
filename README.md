@@ -116,7 +116,33 @@ b)Número de subredes = 2^s, donde s es el número de bits prestados para subred
 hay que dar 2
 la nueva mascara seria /24 + 2 = 26
 
-13.
+13.a) Cuando dos dispositivos quieren comunicarse usando TCP, primero deben establecer una conexión confiable. Para eso, TCP usa un proceso llamado Three-Way Handshake
+SYN (Synchronize):
+El cliente envía un mensaje al servidor con una bandera SYN y un número de secuencia inicial.
+Esto indica que quiere comenzar una conexión.
+
+SYN-ACK:
+El servidor responde con un mensaje que lleva las banderas SYN y ACK.
+Reconoce el número de secuencia del cliente y además envía su propio número de secuencia.
+
+ACK:
+El cliente responde con un mensaje de confirmación que lleva la bandera ACK, reconociendo el número de secuencia del servidor.
+
+b)Cuando uno de los dispositivos quiere cerrar la conexión, se hace un proceso similar, pero con cuatro pasos:
+
+FIN:
+El cliente (o servidor) envía un mensaje con la bandera FIN, diciendo que ya no tiene más datos para enviar.
+
+ACK:
+El otro lado responde con un mensaje de ACK, confirmando que recibió el FIN.
+
+FIN:
+Ahora ese segundo dispositivo también envía su propio mensaje FIN para cerrar su lado de la conexión.
+
+ACK:
+Finalmente, el primero responde con un ACK y la conexión se cierra por completo.
+
+14.
 
  
    
