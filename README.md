@@ -170,7 +170,21 @@ Para pasarlo a bytes:
 Otro mecanismo importante es el algoritmo de Nagle, que está pensado para reducir la cantidad de pequeños paquetes que se envían por la red. Este algoritmo agrupa pequeños mensajes enviados por una aplicación antes de enviarlos como un único segmento. Esto mejora la eficiencia, especialmente en conexiones que generan muchas transmisiones pequeñas, como las de comandos o chats.
 El algoritmo de Clark complementa al de Nagle y busca evitar que el receptor envíe confirmaciones (ACKs) por cada pequeño fragmento de datos recibido. En lugar de responder rápidamente a cada paquete pequeño, espera a tener más datos disponibles o a que pase un tiempo determinado.
 
-17.
+17.a) SMTP se utiliza para enviar correos electrónicos desde un cliente de correo hacia un servidor o entre servidores. Por eso, su función está relacionada con el envío, no con la descarga de mensajes.
+
+En cambio, POP3 e IMAP se utilizan para recibir correos. POP3 es un protocolo más simple y funciona descargando los mensajes del servidor al dispositivo del usuario. Generalmente, al usar POP3 los correos se eliminan del servidor después de descargarse, lo que puede ser un problema si se accede desde varios dispositivos, ya que los mensajes no se sincronizan. IMAP, por el contrario, mantiene los mensajes en el servidor y permite sincronizarlos en varios dispositivos. Esto lo hace más útil hoy en día.
+
+b)  Este protocolo permite la comunicación entre navegadores web y servidores. Funciona mediante peticiones que el cliente (por ejemplo, un navegador) envía al servidor para obtener o enviar información. Los métodos más comunes que se usan en estas peticiones son GET, que se emplea para solicitar recursos como páginas web; POST, que se utiliza para enviar datos al servidor, como formularios; PUT, que sirve para actualizar recursos existentes; y DELETE, que permite eliminar información. 
+Por otro lado, FTP es un protocolo diseñado específicamente para la transferencia de archivos. A diferencia de HTTP, que usa una única conexión para la mayoría de sus operaciones, FTP utiliza dos conexiones separadas: una para el control, donde se envían comandos como iniciar sesión o cambiar de directorio, y otra para la transferencia real de archivos. 
+
+18. a) el streaming es una forma de transmitir contenido multimedia, como video o audio, en tiempo real o bajo demanda, sin necesidad de descargarlo por completo antes de verlo. Existen distintos tipos de streaming, cada uno con sus características.
+
+El UDP streaming utiliza el protocolo UDP para enviar datos rápidamente, sin asegurarse de que todos los paquetes lleguen ni en el orden correcto. Por ejemplo, se usa en transmisiones deportivas en vivo o videollamadas.
+El HTTP streaming funciona utilizando el protocolo HTTP y se basa en descargar el contenido por partes a medida que se reproduce. Aunque es más lento que UDP, tiene la ventaja de que se adapta bien a las redes modernas. Es común en plataformas como YouTube o Spotify.
+Por último, el Adaptive HTTP Streaming o DASH es una versión más avanzada del HTTP streaming. Este método detecta la velocidad y calidad de la red del usuario y adapta automáticamente la calidad del video para evitar interrupciones. Netflix y Amazon Prime usan este tipo de streaming.
+
+b)es una tecnología que permite realizar llamadas telefónicas utilizando Internet en lugar de la red telefónica tradicional. Funciona convirtiendo la voz en paquetes de datos que se transmiten por la red, de forma similar a cómo se envía un correo electrónico o se transmite un video.Algunos problemas comunes en VoIP incluyen el retardo, que ocurre cuando hay un retraso notable entre lo que se dice y lo que se escucha; la pérdida de paquetes, que puede provocar cortes en la voz; y el eco, cuando se escucha lo que uno dijo con retraso.
+
 
 
 
