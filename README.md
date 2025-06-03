@@ -185,7 +185,57 @@ Por último, el Adaptive HTTP Streaming o DASH es una versión más avanzada del
 
 b)es una tecnología que permite realizar llamadas telefónicas utilizando Internet en lugar de la red telefónica tradicional. Funciona convirtiendo la voz en paquetes de datos que se transmiten por la red, de forma similar a cómo se envía un correo electrónico o se transmite un video.Algunos problemas comunes en VoIP incluyen el retardo, que ocurre cuando hay un retraso notable entre lo que se dice y lo que se escucha; la pérdida de paquetes, que puede provocar cortes en la voz; y el eco, cuando se escucha lo que uno dijo con retraso.
 
+19. a)Una técnica común es el uso de buffering en el cliente. Consiste en que el dispositivo del usuario (como un móvil o un ordenador) guarda temporalmente una pequeña parte del video o audio antes de reproducirlo. Esto permite compensar posibles interrupciones en la red, ya que mientras se reproduce un trozo, se va descargando el siguiente. Por ejemplo, en YouTube, cuando ves que se carga una barra gris antes de la parte roja del video, eso es buffering.
+    Otra técnica es el marcado de paquetes mediante DiffServ (Servicios Diferenciados). En este caso, cada paquete de datos se marca según su prioridad. Por ejemplo, los paquetes de voz o video en tiempo real se marcan con alta prioridad para que los routers los traten con preferencia, y así tengan menos retraso y menos pérdida.
 
+    b) El modelo Best-Effort es el más simple.Aquí, la red no garantiza ni velocidad ni calidad. Todos los datos se tratan igual, si hay congestión, puede haber retrasos o pérdida de información. Este modelo es suficiente para cosas que no requieren tiempo real, como navegar por internet o enviar correos.
+    En cambio, los Servicios Multiclase (Multiclass Services) ofrecen distintos niveles de servicio según el tipo de tráfico.Esto permite garantizar una mejor calidad para aplicaciones sensibles al retardo, como videollamadas o juegos en línea. Se usan técnicas como reservas de ancho de banda, colas con prioridades y marcado de paquetes.
+
+    20.  existen varias áreas fundamentales que deben protegerse para garantizar comunicaciones seguras. Una de ellas es la confidencialidad, que consiste en asegurarse de que la información solo sea vista por las personas autorizadas. Para lograr esto, se utiliza el cifrado, que transforma los datos en un formato ilegible para quien no tenga la clave correcta. Por ejemplo, cuando enviamos un mensaje cifrado, aunque alguien lo intercepte, no podrá entenderlo sin la clave.
+
+Otra área importante es la autenticación, que busca verificar que quien está accediendo a la red o a un servicio es realmente quien dice ser. Esto se puede hacer mediante contraseñas, pero también con métodos más seguros como certificados digitales o sistemas biométricos (como huellas o reconocimiento facial). De esta forma, se evita que alguien se haga pasar por otra persona.
+También está el concepto de no repudio, que significa que una persona no puede negar haber enviado un mensaje o realizado una acción. Para esto se utilizan las firmas digitales, que son como un sello único ligado al emisor del mensaje. Así, si alguien firma un documento digital, queda constancia de que lo hizo.
+
+Por último, la integridad se refiere a garantizar que los datos no han sido alterados durante su transmisión. Si un mensaje es modificado por un atacante en el camino, debe poder detectarse. Para esto se usan mecanismos como los hashes o códigos de verificación, que permiten comprobar que el mensaje recibido es exactamente igual al que fue enviado.
+
+21.En el caso del cifrado simétrico, tanto quien envía como quien recibe el mensaje utilizan la misma clave para cifrar y descifrar los datos. Esto quiere decir que primero ambas partes deben compartir esa clave de forma segura. Este tipo de cifrado es muy rápido y eficiente, por eso se usa mucho cuando hay que cifrar grandes volúmenes de datos. Algunos ejemplos comunes de algoritmos simétricos son AES y DES.
+
+En cambio, el cifrado asimétrico utiliza dos claves distintas pero relacionadas entre sí: una clave pública, que puede conocer todo el mundo, y una clave privada, que solo conoce el dueño. Si alguien quiere enviar un mensaje seguro, lo cifra con la clave pública del destinatario, y solo esa persona podrá descifrarlo usando su clave privada. Aunque este método es más seguro para intercambiar claves y verificar identidades, es mucho más lento y no se suele usar para cifrar grandes cantidades de datos. Dos ejemplos conocidos de cifrado asimétrico son RSA y ECC. En la práctica, los sistemas seguros suelen combinar ambos tipos.
+
+22.El algoritmo RSA es un sistema de cifrado asimétrico, lo que significa que usa dos claves diferentes: una pública para cifrar y una privada para descifrar. Se basa en la dificultad de factorizar números grandes. El proceso tiene dos fases importantes: la generación de claves y el cifrado/descifrado del mensaje.
+se eligen dos numeros primos ( p = 3 y q=11)
+n = p * q = 3*11 = 33
+φ(n)=(p−1)×(q−1) = 2 * 10 = 20
+Ahora elegimos un número 𝑒 que sea coprimo con 20
+e =7
+d * e = 1
+probamos con 3:
+3 * 7 =21 mod 20 =1
+por lo tanto:
+clave publica= (e=7, n = 33)
+clave privada: (d=3, n =33)
+calclulamos:
+4^7 =16384
+16384 mod33 = 16
+
+a) Un firewall es un sistema de seguridad que se coloca entre una red confiable (como una red local) y otra no confiable (como Internet). Su función principal es controlar el tráfico de red, permitiendo o bloqueando paquetes según unas reglas predefinidas.
+
+Existen diferentes tipos de firewalls. Uno es el firewall de filtrado de paquetes, que revisa los encabezados de los paquetes (como la dirección IP, el puerto y el protocolo) y los deja pasar o no según reglas simples. Otro tipo es el firewall con inspección de estado, que no solo revisa los encabezados, sino que también mantiene un registro del estado de las conexiones (por ejemplo, si ya está establecida una comunicación) y toma decisiones más inteligentes sobre qué permitir o bloquear.
+
+b)Una VPN (Red Privada Virtual) permite que un usuario se conecte de forma segura a una red a través de Internet, como si estuviera físicamente dentro de esa red. Por ejemplo, un empleado puede acceder a los recursos de la red de su empresa desde casa usando una VPN.
+
+IPSec, en cambio, es un conjunto de protocolos que se usa para asegurar las comunicaciones a nivel de red. IPSec puede cifrar y autenticar los paquetes IP, y muchas VPN usan IPSec como base para garantizar seguridad.
+
+c) SSL (Secure Sockets Layer) y su sucesor TLS (Transport Layer Security) son protocolos que se usan para proteger la comunicación en Internet, especialmente en páginas web.
+Cuando visitas una página con HTTPS, el navegador y el servidor web usan TLS para cifrar los datos que se envían entre ambos. Esto evita que otras personas puedan ver lo que estás escribiendo o recibiendo, como contraseñas, correos o información personal.
+
+24. El DNS Spoofing es un tipo de ataque en el que un atacante falsifica las respuestas del sistema DNS para engañar al usuario. El DNS es como la “guía telefónica” de Internet: traduce nombres de páginas en direcciones IP, que es lo que entienden los dispositivos.
+
+Cuando ocurre un DNS Spoofing, el atacante logra que el usuario reciba una respuesta falsa del DNS, llevándolo a un sitio falso que parece real. Por ejemplo, podrías escribir www.banco.com y terminar en una página falsa que copia el diseño del banco, con el objetivo de robar tus datos.
+Este tipo de ataque rompe la integridad de la comunicación, porque el usuario cree que está visitando un sitio legítimo cuando en realidad no lo está.
+
+b)DNSSEC (Domain Name System Security Extensions) es una extensión del sistema DNS que añade seguridad mediante firmas digitales.
+Cuando se usa DNSSEC, cada respuesta DNS viene acompañada de una firma criptográfica que el navegador o sistema del usuario puede verificar. Esta firma confirma que la respuesta proviene del servidor DNS auténtico y que no ha sido alterada.
 
 
  
