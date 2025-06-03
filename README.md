@@ -24,9 +24,20 @@ Una vez obtenida la dirección IP, esta se envía al navegador, que finalmente e
    C = 500000000 * log(1 + 100) = 500000000 * 6.6582 = 3.33 gbps
 
 6. a) 1.2 ghz - 0.3 ghz = 0.9ghz
+   
    b)  1.2 ghz + 0.3 ghz = 1.5ghz
 
-7.
+7. BPSK
+
+QPSK
+
+16-QAM
+
+64-QAM
+
+256-QAM
+
+A medida que aumenta el número de símbolos por baudio, los puntos en el plano de constelación están más juntos, y el receptor necesita mayor precisión para distinguirlos. Si hay ruido, es más fácil que se confundan, lo que genera más errores. Por eso, modulaciones como 256-QAM transmiten más datos por símbolo, pero son muy sensibles al ruido, mientras que BPSK transmite menos datos, pero es más confiable.
    
    
  
