@@ -166,7 +166,13 @@ Ventana óptima = 100,000,000 × 0.05 = 5,000,000 bits
 Para pasarlo a bytes:
 5,000,000 ÷ 8 = 625,000 bytes
 
-16.
+16.TCP utiliza varios mecanismos para controlar la congestión en la red y evitar que se saturen los enlaces. Uno de los más importantes es el algoritmo de arranque lento, también conocido como slow start. Este algoritmo se activa al inicio de una conexión o después de detectar una pérdida de paquetes. En lugar de enviar muchos datos de golpe, el emisor empieza enviando una pequeña cantidad de segmentos y va aumentando el número de segmentos enviados de forma exponencial, duplicando la cantidad en cada ronda de confirmaciones. Cuando se alcanza un cierto umbral, TCP cambia al modo de evitación de congestión, donde ya no crece de manera rápida, sino más lentamente, para evitar causar problemas si la red está llegando a su límite. 
+Otro mecanismo importante es el algoritmo de Nagle, que está pensado para reducir la cantidad de pequeños paquetes que se envían por la red. Este algoritmo agrupa pequeños mensajes enviados por una aplicación antes de enviarlos como un único segmento. Esto mejora la eficiencia, especialmente en conexiones que generan muchas transmisiones pequeñas, como las de comandos o chats.
+El algoritmo de Clark complementa al de Nagle y busca evitar que el receptor envíe confirmaciones (ACKs) por cada pequeño fragmento de datos recibido. En lugar de responder rápidamente a cada paquete pequeño, espera a tener más datos disponibles o a que pase un tiempo determinado.
+
+17.
+
+
 
  
    
