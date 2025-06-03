@@ -48,7 +48,13 @@ A medida que aumenta el número de símbolos por baudio, los puntos en el plano 
 
    d) 512 / 1152 = 0.444 = 44.4%
 
-9.
+9.a) El algoritmo de Dijkstra sirve para encontrar la ruta más corta entre un nodo origen y todos los demás nodos de un grafo, teniendo en cuenta que cada enlace tiene un coste. Sus pasos basicos son: Se parte del nodo origen asignando una distancia 0, a todo lo demas se le asigna infinito; se marca el nodo actual como visitado; se calcula la 
+distancia total desde el origen hasta cada nodo vecino del actual; si esa nueva distancia es menor de la que se tenia antes, se actualiza; se selecciona el nodo no visitado con menor distancia conocida y se repite el proceso, y el proceso termina cuando se han visitado todos los nodos.
+
+b) A diferencia del enrutamiento por inundación, el algoritmo de Dijkstra encuentra la ruta mas corta y eficiente, evita el trafico innecesario, usa tablas de enrutamiento, y, aunque es mas lento de calcular, es muy eficiente una vez establecido.
+Por otro lado, el Flooding envia el paquete por todos los caminos posibles, no necesita conocer la topologia de la red, garantiza que el mensaje llegue pero genera mucho trafico y puede causar tormentas de paquetes si no se controla.
+
+10.
    
    
    
