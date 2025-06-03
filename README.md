@@ -38,6 +38,18 @@ QPSK
 256-QAM
 
 A medida que aumenta el número de símbolos por baudio, los puntos en el plano de constelación están más juntos, y el receptor necesita mayor precisión para distinguirlos. Si hay ruido, es más fácil que se confundan, lo que genera más errores. Por eso, modulaciones como 256-QAM transmiten más datos por símbolo, pero son muy sensibles al ruido, mientras que BPSK transmite menos datos, pero es más confiable.
+
+8. a) 2048 + 144 = 2192 bytes
+   
+   b) 2192/512 = 4.28 , se necesitan 5 tramas en total.
+   
+   c) 512 * 9/4 = 1152 bytes transmitidos
+   1152 - 512 = 640 bytes
+
+   d) 512 / 1152 = 0.444 = 44.4%
+
+9.
+   
    
    
  
